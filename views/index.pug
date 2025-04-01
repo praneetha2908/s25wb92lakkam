@@ -6,12 +6,15 @@ block content
   p This is Praneetha Lakkam
   button(type="button", class="btn btn-primary", onclick="faster()") Press Me
   div#faster Adding the extra
-  script.
-      let value = 1;
-      let amt = 2;
 
-      function faster() {
-        amt *= 2;
-        value += amt;
-        document.getElementById("faster").innerText = Faster ${value} times ${amt};
-      }
+  script.
+    let value = 1;
+    let amt = 2;
+
+    function faster() {
+      amt *= 2;
+      value += amt;
+      document.getElementById("faster").innerText = `Faster ${value} times ${amt}`;
+    }
+
+  a(href="/bicycles") Go to Bicycle Search Results
