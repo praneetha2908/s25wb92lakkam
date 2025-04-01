@@ -12,9 +12,8 @@ block content
 
   .container-fluid
     .row
-      - results.forEach(function(bicycle) {
+      each bicycle in results
         .col-sm-2
           p Bicycle Type: #{bicycle.bicycle_type}
           p Wheel Size: #{bicycle.wheel_size}
           p Cost: $#{bicycle.cost}
-      })
