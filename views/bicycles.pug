@@ -5,17 +5,16 @@ block content
 
   //- Define the results array
   - let results = [
-    { bicycle_type: 'Mountain', wheel_size: 27.5, cost: 250 },
-    { bicycle_type: 'Road', wheel_size: 28, cost: 350 },
-    { bicycle_type: 'Hybrid', wheel_size: 26, cost: 200 }
-  ]
+  -   { bicycle_type: 'Mountain', wheel_size: 27.5, cost: 250 },
+  -   { bicycle_type: 'Road', wheel_size: 28, cost: 350 },
+  -   { bicycle_type: 'Hybrid', wheel_size: 26, cost: 200 }
+  - ]
 
-  //- Outer container for Bootstrap grid
   .container-fluid
     .row
-      each bicycle in results
+      - results.forEach(function(bicycle) {
         .col-sm-2
-          div
-            p Bicycle Type: #{bicycle.bicycle_type}
-            p Wheel Size: #{bicycle.wheel_size} inches
-            p Cost: $#{bicycle.cost}
+          p Bicycle Type: #{bicycle.bicycle_type}
+          p Wheel Size: #{bicycle.wheel_size}
+          p Cost: $#{bicycle.cost}
+      })
