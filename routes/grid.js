@@ -9,9 +9,9 @@ router.get('/', function(req, res, next) {
   let rows = Number(query.rows) || 0;  // Convert to number (default to 0 if missing)
   let cols = Number(query.cols) || 0;
 
-  console.log(Parsed rows: ${rows}, Parsed cols: ${cols});
+  console.log(`Parsed rows: ${rows}, Parsed cols: ${cols}`); // Fixed string interpolation
 
-  res.render('grid', { title: "Grid Display", query: query });
+  res.render('grid', { title: "Grid Display", rows: rows, cols: cols });
 });
 
 module.exports = router;
