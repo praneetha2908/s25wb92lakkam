@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET Lamps search results page. */
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('lamps', { title: 'Search Results: Lamps' });
+  res.render('juice', { title: 'Search Results for Juice' });
 });
 
 module.exports = router;
-
