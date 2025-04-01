@@ -1,14 +1,14 @@
-const express = require('express');
-const app = express();
+var express = require('express');
+var router = express.Router();
 
-app.set('view engine', 'pug');
-
-app.get('/bicycles', (req, res) => {
-  res.render('bicycles', {
-    title: 'Search Results: Bicycles'
-  });
+/* GET bicycles listing. */
+router.get('/', function(req, res, next) {
+  let bicycles = [
+    { bicycle_type: 'Mountain', wheel_size: 27.5, cost: 250 },
+    { bicycle_type: 'Road', wheel_size: 28, cost: 350 },
+    { bicycle_type: 'Hybrid', wheel_size: 26, cost: 200 }
+  ];
+  res.render('bicycles', { title: 'Search Results: Bicycles', bicycles });
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+module.exports = router;
