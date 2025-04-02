@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1 A random item
-  - var image_names = ['mango.jpeg', 'custardapple.jpg', 'allnuts.jpg', 'chocolate.jpg', 'strawberry.jpg']
+  - var image_names = ['mango.jpg', 'custardapple.jpg', 'allnuts.jpg', 'chocolate.jpg', 'strawberry.jpg']
   - for (let i = 0; i < 3; i++)
     - var randomIndex = Math.floor(Math.random() * 5)
-    img(src=`/images/${image_names[randomIndex]}`, alt=image_names[randomIndex], height="300", width="300")
+    img(src=`/images/${image_names[randomIndex]}`, alt=image_names[randomIndex], height="200", width="200")
